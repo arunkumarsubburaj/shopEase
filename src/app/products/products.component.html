@@ -1,1 +1,31 @@
-<p class="emptyState">products works!</p>
+<div id="productsWrapper">
+  <div class="filterBar">
+    <div class="categoryWrapper" #categoryDropdown (click)="toggleCategoryFilter()">
+      <span class="categoryName">Category</span>
+      <input type="hidden" name="categoryValue" [(ngModel)]="selectedCategory" />
+      <ul class="categoryItems">
+        <li class="categoryItem" *ngFor="let item of categoryList" [attr.data-item-value]='item.value'
+          (click)="categoryClicked($event)">
+          {{item.viewValue}}</li>
+      </ul>
+    </div>
+    <div class="searchWrapper">
+      <span class="material-symbols-outlined searchIcon">
+        search
+      </span>
+      <input type="text" name="searchFilter" id="searchFilter" placeholder="Search by product name..."
+        [(ngModel)]="searchValue" (keyup)="searchFilterChange()" />
+      <span class="material-symbols-outlined closeIcon" *ngIf="searchValue.length>0" (click)="clearSearch()">
+        close
+      </span>
+    </div>
+  </div>
+  <main>
+    <ng-container *ngIf="modifiedProductList.length>0;else noProducts">
+      <app-product-card *ngFor="let product of modifiedProductList" [productData]="product"></app-product-card>
+    </ng-container>
+    <ng-template #noProducts>
+      <p class="noProducts">No Products to display</p>
+    </ng-template>
+  </main>
+</div>

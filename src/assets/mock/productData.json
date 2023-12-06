@@ -1,0 +1,232 @@
+[
+  {
+    "_id": "656f7a9429c602ed45104830",
+    "index": 0,
+    "sku": "61d8b0ae-2453-4dc6-954b-2110ef91ef34",
+    "isAvailable": true,
+    "price": 1850,
+    "imageUrl": "https://picsum.photos/id/50/500",
+    "title": "Sample Product electronics 59",
+    "category": "electronics"
+  },
+  {
+    "_id": "656f7a94c9f909016083115c",
+    "index": 1,
+    "sku": "c902e87c-72d0-45ac-bed8-f8a2d35164fb",
+    "isAvailable": false,
+    "price": 2246,
+    "imageUrl": "https://picsum.photos/id/40/500",
+    "title": "Sample Product phones 19",
+    "category": "phones"
+  },
+  {
+    "_id": "656f7a94d66a16160e434326",
+    "index": 2,
+    "sku": "c59a5d37-2f7f-4f96-a6d6-4d608d9244c9",
+    "isAvailable": true,
+    "price": 2265,
+    "imageUrl": "https://picsum.photos/id/32/500",
+    "title": "Sample Product electronics 82",
+    "category": "electronics"
+  },
+  {
+    "_id": "656f7a94a222e788e1e9704e",
+    "index": 3,
+    "sku": "18fa257c-9725-444f-ab32-d07636a4c538",
+    "isAvailable": true,
+    "price": 2197,
+    "imageUrl": "https://picsum.photos/id/30/500",
+    "title": "Sample Product electronics 41",
+    "category": "electronics"
+  },
+  {
+    "_id": "656f7a942510252969767b57",
+    "index": 4,
+    "sku": "1bea0f8d-daeb-428f-ba81-a7c55fe8110f",
+    "isAvailable": false,
+    "price": 1593,
+    "imageUrl": "https://picsum.photos/id/1/500",
+    "title": "Sample Product clothing 58",
+    "category": "clothing"
+  },
+  {
+    "_id": "656f7a94de46b9231c7b6a08",
+    "index": 5,
+    "sku": "8404e214-bd48-4f62-98a2-42835a1e9ebf",
+    "isAvailable": false,
+    "price": 1642,
+    "imageUrl": "https://picsum.photos/id/43/500",
+    "title": "Sample Product electronics 100",
+    "category": "electronics"
+  },
+  {
+    "_id": "656f7a947967aae6789bab55",
+    "index": 6,
+    "sku": "f8ce8684-3576-4e5b-be22-60d498fedec1",
+    "isAvailable": false,
+    "price": 3298,
+    "imageUrl": "https://picsum.photos/id/46/500",
+    "title": "Sample Product phones 19",
+    "category": "phones"
+  },
+  {
+    "_id": "656f7a9418433f730b0b4d93",
+    "index": 7,
+    "sku": "28bf1f99-bd4f-4e28-9f58-ceee20621e58",
+    "isAvailable": true,
+    "price": 3400,
+    "imageUrl": "https://picsum.photos/id/18/500",
+    "title": "Sample Product clothing 98",
+    "category": "clothing"
+  },
+  {
+    "_id": "656f7a94b4745071ebb0e09a",
+    "index": 8,
+    "sku": "6ad04c69-bf0c-456c-9161-b9f7805e474f",
+    "isAvailable": true,
+    "price": 1389,
+    "imageUrl": "https://picsum.photos/id/27/500",
+    "title": "Sample Product clothing 46",
+    "category": "clothing"
+  },
+  {
+    "_id": "656f7a94f677dcc6b055f7fa",
+    "index": 9,
+    "sku": "124dc1f2-e968-4194-b676-b98c3b8399ea",
+    "isAvailable": true,
+    "price": 1042,
+    "imageUrl": "https://picsum.photos/id/29/500",
+    "title": "Sample Product clothing 7",
+    "category": "clothing"
+  },
+  {
+    "_id": "656f7a9480941977915f778f",
+    "index": 10,
+    "sku": "0e3180e5-4ae9-409b-83a7-f10eb3c16170",
+    "isAvailable": true,
+    "price": 1188,
+    "imageUrl": "https://picsum.photos/id/8/500",
+    "title": "Sample Product clothing 67",
+    "category": "clothing"
+  },
+  {
+    "_id": "656f7a943aaace04db9ee74d",
+    "index": 11,
+    "sku": "ad3479ec-bd27-4d60-8684-4dc25ba71f2d",
+    "isAvailable": true,
+    "price": 2355,
+    "imageUrl": "https://picsum.photos/id/6/500",
+    "title": "Sample Product phones 54",
+    "category": "phones"
+  },
+  {
+    "_id": "656f7a945352ec53680b751f",
+    "index": 12,
+    "sku": "c2b83c10-ed69-44da-8852-65ab9174d938",
+    "isAvailable": true,
+    "price": 1589,
+    "imageUrl": "https://picsum.photos/id/48/500",
+    "title": "Sample Product phones 20",
+    "category": "phones"
+  },
+  {
+    "_id": "656f7a94ba1c2e9f5e04e3d2",
+    "index": 13,
+    "sku": "49b534bf-dd26-4969-a877-6a71d8c12e9a",
+    "isAvailable": false,
+    "price": 1844,
+    "imageUrl": "https://picsum.photos/id/33/500",
+    "title": "Sample Product phones 37",
+    "category": "phones"
+  },
+  {
+    "_id": "656f7a94a43d3413224f050b",
+    "index": 14,
+    "sku": "6e909acd-2c39-4213-a0b4-3211447756f5",
+    "isAvailable": false,
+    "price": 1460,
+    "imageUrl": "https://picsum.photos/id/37/500",
+    "title": "Sample Product books 77",
+    "category": "books"
+  },
+  {
+    "_id": "656f7a94b6b277182ea6a68c",
+    "index": 15,
+    "sku": "723c4b63-c67d-4448-9532-d73786e4ed1b",
+    "isAvailable": true,
+    "price": 1102,
+    "imageUrl": "https://picsum.photos/id/36/500",
+    "title": "Sample Product electronics 76",
+    "category": "electronics"
+  },
+  {
+    "_id": "656f7a94eb6ad54cfa351b3e",
+    "index": 16,
+    "sku": "bf0b88e6-570b-473a-8912-64ca2bf164bb",
+    "isAvailable": true,
+    "price": 1568,
+    "imageUrl": "https://picsum.photos/id/27/500",
+    "title": "Sample Product books 83",
+    "category": "books"
+  },
+  {
+    "_id": "656f7a94a354523381182a59",
+    "index": 17,
+    "sku": "e69c71d0-97e0-4d2b-9baf-847bd152b992",
+    "isAvailable": true,
+    "price": 2232,
+    "imageUrl": "https://picsum.photos/id/11/500",
+    "title": "Sample Product clothing 25",
+    "category": "clothing"
+  },
+  {
+    "_id": "656f7a9495f8de7f6015c1ab",
+    "index": 18,
+    "sku": "e8f40f4c-e1ea-4881-902a-dd78b8db978e",
+    "isAvailable": false,
+    "price": 2097,
+    "imageUrl": "https://picsum.photos/id/26/500",
+    "title": "Sample Product books 96",
+    "category": "books"
+  },
+  {
+    "_id": "656f7a94243528cd1de7ee85",
+    "index": 19,
+    "sku": "b2f8772d-e2a0-4b56-b521-596a41a3c0ab",
+    "isAvailable": true,
+    "price": 1128,
+    "imageUrl": "https://picsum.photos/id/37/500",
+    "title": "Sample Product clothing 80",
+    "category": "clothing"
+  },
+  {
+    "_id": "656f7a94885733c8c8a961c0",
+    "index": 20,
+    "sku": "cc029110-c87d-4c43-8d8d-9c895681a2f8",
+    "isAvailable": false,
+    "price": 2464,
+    "imageUrl": "https://picsum.photos/id/19/500",
+    "title": "Sample Product books 53",
+    "category": "books"
+  },
+  {
+    "_id": "656f7a94f781db7f39a6890c",
+    "index": 21,
+    "sku": "fd070fd4-595e-45c4-a6b0-d5ff5b3dbdd9",
+    "isAvailable": true,
+    "price": 2419,
+    "imageUrl": "https://picsum.photos/id/6/500",
+    "title": "Sample Product books 44",
+    "category": "books"
+  },
+  {
+    "_id": "656f7a942d9c7ffa5b27d377",
+    "index": 22,
+    "sku": "6afe616e-e590-496b-8cd3-d83e0f984882",
+    "isAvailable": true,
+    "price": 3284,
+    "imageUrl": "https://picsum.photos/id/18/500",
+    "title": "Sample Product phones 26",
+    "category": "phones"
+  }
+]

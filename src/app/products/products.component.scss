@@ -1,0 +1,147 @@
+@import "./../../assets/styles/variables";
+div#productsWrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+// categoryFilter
+.categoryWrapper {
+  width: 320px;
+  padding: 10px;
+  position: relative;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul.categoryItems {
+  position: absolute;
+  top: 40px;
+  border: 1px solid transparent;
+  width: 100%;
+  left: 0px;
+  box-sizing: border-box;
+  background: $background-color;
+  overflow: auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  z-index: 2;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.categoryWrapper.show .categoryItems {
+  max-height: 200px;
+  border: 1px solid;
+}
+
+ul.categoryItems > li.categoryItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul.categoryItems > li.categoryItem:hover {
+  background: #ccc;
+}
+
+.categoryWrapper:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 14px solid #333;
+  transition: transform 0.35s ease-in-out;
+  position: absolute;
+  right: 10px;
+}
+
+.categoryWrapper.show:after {
+  transform: rotate(180deg);
+}
+
+// Search Filter
+
+.filterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+input#searchFilter {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 20px;
+  text-indent: 10px;
+  background-color: transparent;
+}
+
+input#searchFilter:focus,
+input#searchFilter:active {
+  border-color: $primary-color;
+}
+.searchIcon,
+.closeIcon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.closeIcon {
+  left: auto;
+  right: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .filterBar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    > div {
+      width: 100%;
+      margin: 10px 0;
+      #searchFilter {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 100%;
+}
+
+.noProducts {
+  font-size: 1.2rem;
+  color: grey;
+  text-align: center;
+  margin: 40px auto;
+}

@@ -1,0 +1,38 @@
+import { CommonModule } from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
+export interface ProductData {
+  _id: string;
+  index: number;
+  sku: string;
+  isAvailable: boolean;
+  price: number;
+  imageUrl: string;
+  title: string;
+  category: string;
+}
+@Component({
+  selector: 'app-product-card',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './productCard.component.html',
+  styleUrl: './productCard.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class ProductCardComponent {
+  @Input() productData: null | ProductData = null;
+  @ViewChild('productImageRef') productImageRef!: ElementRef;
+  @Input() category: string = 'all';
+  @Input() filterValue: string = '';
+  ngAfterViewInit() {
+    const productImageEle: HTMLDivElement = this.productImageRef.nativeElement;
+    if (this.productData) {
+      productImageEle.style.backgroundImage = `url(${this.productData.imageUrl})`;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div id="productCardWrapper" *ngIf="productData" [ngClass]="{'outOfStock': !productData.isAvailable}"
+  [attr.data-product-sku]="productData.sku" [attr.data-product-id]="productData._id">
+  <div class="productImage" #productImageRef></div>
+  <div class="productFooter">
+    <div class="productName">{{productData.title}}</div>
+    <div class="productPrice">{{productData.price | currency:'INR'}}</div>
+    <button class="addToCartBtn">{{productData.isAvailable ? 'Add to
+      Cart': 'Sold Out'}}</button>
+  </div>
+</div>

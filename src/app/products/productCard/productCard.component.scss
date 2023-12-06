@@ -1,0 +1,76 @@
+@import "./../../../assets/styles/variables";
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 0;
+  max-width: 450px;
+  min-width: 300px;
+}
+
+div#productCardWrapper {
+  width: 100%;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 250px;
+  gap: 10px;
+  flex-direction: column;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  &:hover {
+    scale: 1.05;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.productImage {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  background-color: grey;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.productFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button.addToCartBtn {
+  padding: 10px 0;
+  border: none;
+  background-color: $primary-color;
+  border-radius: 5px;
+  font-weight: bold;
+  color: $color;
+  cursor: pointer;
+  &:hover {
+    background-color: $accent-color;
+    color: $color_contrast;
+  }
+}
+.outOfStock {
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+  .addToCartBtn {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: #ccc;
+  }
+}
