@@ -13,11 +13,12 @@ nav {
   z-index: 4;
   .header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 16px;
     padding: 0 10px;
     cursor: pointer;
+    flex-grow: 1;
     .logo {
       background-image: url("./../images/kovai-logo.png");
       background-repeat: no-repeat;
@@ -35,12 +36,48 @@ nav {
   a {
     text-decoration: none;
     color: $color;
-    margin: 0 15px;
+    margin: 0 5px;
     font-size: 18px;
     display: block;
     padding: 16px 8px;
     &.active {
       text-decoration: underline;
+    }
+  }
+  .spacer {
+    width: 0;
+    height: 100%;
+    padding: 20px;
+    padding-right: 50px;
+  }
+  .theme {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    overflow: hidden;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+    > span {
+      position: absolute;
+      transition: left 0.35s;
+      top: 5px;
+    }
+    span.darkMode {
+      left: 100%;
+    }
+    span.lightMode {
+      left: 0;
+    }
+    &.dark {
+      span.lightMode {
+        left: -100%;
+      }
+      span.darkMode {
+        left: 0;
+      }
     }
   }
 }
@@ -81,11 +118,12 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-right: 10px;
   li {
     cursor: pointer;
     // padding: 16px 8px;
     &:hover {
-      background-color: $background-color_contrast;
+      background-color: $background-color;
       a {
         color: $color;
       }
@@ -95,6 +133,9 @@ nav {
 @media only screen and (max-width: 768px) {
   nav {
     justify-content: center;
+    .header {
+      flex-grow: 0;
+    }
     a {
       display: block;
       padding: 8px;

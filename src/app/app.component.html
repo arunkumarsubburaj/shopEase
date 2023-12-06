@@ -15,6 +15,15 @@
       <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li>
       <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
     </ul>
+    <div class="spacer"></div>
+    <div class="theme" (click)="toggleTheme()" #themeEleRef>
+      <span class="material-symbols-outlined lightMode">
+        light_mode
+      </span>
+      <span class="material-symbols-outlined darkMode">
+        dark_mode
+      </span>
+    </div>
   </nav>
   <main>
     <router-outlet></router-outlet>

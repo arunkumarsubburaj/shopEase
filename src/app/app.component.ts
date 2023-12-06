@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   NavigationStart,
@@ -9,6 +9,10 @@ import {
 } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
+export enum Theme {
+  'Light' = 'light',
+  'Dark' = 'dark',
+}
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,7 +22,11 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'ShopEase';
-  constructor(router: Router) {
+  theme: Theme = Theme.Light;
+  rootEle!: HTMLDivElement;
+  @ViewChild('themeEleRef') themeEleRef!: ElementRef;
+  constructor(router: Router, element: ElementRef) {
+    this.rootEle = element.nativeElement;
     router.events
       .pipe(filter((e) => e instanceof NavigationStart))
       .subscribe((e) => {
@@ -35,5 +43,18 @@ export class AppComponent {
     );
     const navList = document.querySelector('.nav-list') as HTMLElement;
     navList.classList.toggle('show');
+  }
+  toggleTheme() {
+    const themeEle = this.themeEleRef.nativeElement as HTMLDivElement;
+    this.theme = this.theme == Theme.Light ? Theme.Dark : Theme.Light;
+    if (this.theme == Theme.Light) {
+      themeEle.classList.remove('dark');
+      this.rootEle.classList.remove('dark-theme');
+      this.rootEle.classList.add('light-theme');
+    } else {
+      themeEle.classList.add('dark');
+      this.rootEle.classList.add('dark-theme');
+      this.rootEle.classList.remove('light-theme');
+    }
   }
 }
