@@ -1,12 +1,13 @@
 // Header Styles
 
 nav {
-  background-color: $primary-color;
-  color: $color;
+  background-color: var(--primary-color);
+  color: var(--color_contrast);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  height: 50px;
   left: 0;
   top: 0;
   width: 100%;
@@ -20,7 +21,7 @@ nav {
     cursor: pointer;
     flex-grow: 1;
     .logo {
-      background-image: url("./../images/kovai-logo.png");
+      background-image: url("./../images/shopEase_logo.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -35,7 +36,7 @@ nav {
   }
   a {
     text-decoration: none;
-    color: $color;
+    color: var(--color_contrast);
     margin: 0 5px;
     font-size: 18px;
     display: block;
@@ -46,8 +47,8 @@ nav {
   }
   .spacer {
     width: 0;
-    height: 100%;
-    padding: 20px;
+    height: 80%;
+    padding: 10px 20px;
     padding-right: 50px;
   }
   .theme {
@@ -94,7 +95,7 @@ nav {
   .bar {
     width: 30px;
     height: 3px;
-    background-color: $color;
+    background-color: var(--color_contrast);
     margin: 5px 0;
     transition: 0.5s;
   }
@@ -123,13 +124,21 @@ nav {
     cursor: pointer;
     // padding: 16px 8px;
     &:hover {
-      background-color: $background-color;
+      background-color: var(--background-color_contrast);
       a {
-        color: $color;
+        color: var(--color_contrast);
       }
     }
   }
 }
+
+.spacer {
+  padding: 30px;
+  width: 0;
+  height: 100%;
+  border-left: 2px solid;
+}
+
 @media only screen and (max-width: 768px) {
   nav {
     justify-content: center;
@@ -141,12 +150,15 @@ nav {
       padding: 8px;
     }
   }
+  .spacer {
+    display: none;
+  }
   .nav-list {
     flex-direction: column;
     width: 320px;
     position: fixed;
     top: 0;
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     padding-top: 65px;
     left: -200%;
     height: 100%;

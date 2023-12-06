@@ -1,8 +1,8 @@
 // Footer Styles
 
 footer {
-  background-color: $bg-color_footer;
-  color: $color;
+  background-color: var(--bg-color_footer);
+  color: var(--color);
   padding: 20px;
   text-align: center;
   width: 100%;
@@ -16,5 +16,5 @@ footer {
   margin: 10px;
 }
 a {
-  color: $color;
+  color: var(--color);
 }

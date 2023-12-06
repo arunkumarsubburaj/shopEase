@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex: 1 0;
-  max-width: 450px;
+  max-width: 350px;
   min-width: 300px;
 }
 
@@ -21,7 +21,7 @@ div#productCardWrapper {
   flex-direction: column;
   transition: all 0.2s ease-in;
   cursor: pointer;
-  &:hover {
+  &:not(.outOfStock):hover {
     scale: 1.05;
     box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
   }
@@ -29,9 +29,9 @@ div#productCardWrapper {
 
 .productImage {
   width: 100%;
-  height: 200px;
+  height: 250px;
   border-radius: 5px;
-  background-color: grey;
+  background-color: var(--background-color);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,24 +41,22 @@ div#productCardWrapper {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  color: var(--color);
 }
 
 button.addToCartBtn {
   padding: 10px 0;
   border: none;
-  background-color: $primary-color;
+  background-color: var(--accent-color);
   border-radius: 5px;
   font-weight: bold;
-  color: $color;
+  color: var(--color_contrast);
   cursor: pointer;
-  &:hover {
-    background-color: $accent-color;
-    color: $color_contrast;
-  }
 }
 .outOfStock {
   position: relative;
   overflow: hidden;
+  cursor: not-allowed;
   &:after {
     content: "";
     position: absolute;
@@ -66,7 +64,8 @@ button.addToCartBtn {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.3);
+    background-color: var(--overlay-color);
+    cursor: not-allowed;
   }
   .addToCartBtn {
     cursor: not-allowed;

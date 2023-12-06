@@ -1,7 +1,9 @@
-@import "./../assets/styles/variables";
 @import "./../assets/styles/header";
 @import "./../assets/styles/footer";
 main {
   padding-top: 50px;
   min-height: 100vh;
+}
+#app {
+  background-color: var(--background-color);
 }

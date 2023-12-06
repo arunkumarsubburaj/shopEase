@@ -49,12 +49,12 @@ export class AppComponent {
     this.theme = this.theme == Theme.Light ? Theme.Dark : Theme.Light;
     if (this.theme == Theme.Light) {
       themeEle.classList.remove('dark');
-      this.rootEle.classList.remove('dark-theme');
-      this.rootEle.classList.add('light-theme');
+      document.querySelector('html')?.classList.add('light-theme');
+      document.querySelector('html')?.classList.remove('dark-theme');
     } else {
       themeEle.classList.add('dark');
-      this.rootEle.classList.add('dark-theme');
-      this.rootEle.classList.remove('light-theme');
+      document.querySelector('html')?.classList.remove('light-theme');
+      document.querySelector('html')?.classList.add('dark-theme');
     }
   }
 }
