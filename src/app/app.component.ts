@@ -27,26 +27,38 @@ export class AppComponent {
   @ViewChild('themeEleRef') themeEleRef!: ElementRef;
   constructor(router: Router, element: ElementRef) {
     this.rootEle = element.nativeElement;
+    // Listen to router events
     router.events
+      // Filter the events to only include NavigationStart
       .pipe(filter((e) => e instanceof NavigationStart))
+      // Subscribe to the router events
       .subscribe((e) => {
+        // Get the menu icon element
         const menuIcon = document.getElementById('menu-icon') as HTMLDivElement;
+        // Remove the show class from the menu icon
         menuIcon.classList.remove('show');
+        // Get the navigation list element
         const navList = document.querySelector('.nav-list') as HTMLElement;
+        // Remove the show class from the navigation list
         navList.classList.remove('show');
       });
   }
   ngAfterViewInit() {}
+
   toggleIcon() {
+    // Toggle the show class on the menu icon element
     (document.getElementById('menu-icon') as HTMLDivElement).classList.toggle(
       'show'
     );
+    // Toggle the show class on the nav list element
     const navList = document.querySelector('.nav-list') as HTMLElement;
     navList.classList.toggle('show');
   }
   toggleTheme() {
     const themeEle = this.themeEleRef.nativeElement as HTMLDivElement;
+    // Change the theme
     this.theme = this.theme == Theme.Light ? Theme.Dark : Theme.Light;
+    // Update the class list
     if (this.theme == Theme.Light) {
       themeEle.classList.remove('dark');
       document.querySelector('html')?.classList.add('light-theme');

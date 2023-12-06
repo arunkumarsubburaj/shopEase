@@ -19,6 +19,26 @@ div#productsWrapper {
   border-radius: 5px;
   cursor: pointer;
   color: var(--color);
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 14px solid var(--background-color_contrast);
+    transition: transform 0.35s ease-in-out;
+    position: absolute;
+    right: 10px;
+  }
+  &.show {
+    &:after {
+      transform: rotate(180deg);
+    }
+    .categoryItems {
+      max-height: 200px;
+      border: 1px solid;
+    }
+  }
 }
 
 ul.categoryItems {
@@ -36,36 +56,13 @@ ul.categoryItems {
   max-height: 0;
   z-index: 2;
   transition: max-height 0.35s ease-in-out;
-}
-
-.categoryWrapper.show .categoryItems {
-  max-height: 200px;
-  border: 1px solid;
-}
-
-ul.categoryItems > li.categoryItem {
-  padding: 10px;
-  cursor: pointer;
-}
-
-ul.categoryItems > li.categoryItem:hover {
-  background: var(--hover-color);
-}
-
-.categoryWrapper:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 14px solid var(--background-color_contrast);
-  transition: transform 0.35s ease-in-out;
-  position: absolute;
-  right: 10px;
-}
-
-.categoryWrapper.show:after {
-  transform: rotate(180deg);
+  > li.categoryItem {
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background: var(--hover-color);
+    }
+  }
 }
 
 // Search Filter
@@ -95,12 +92,12 @@ input#searchFilter {
   text-indent: 10px;
   background-color: transparent;
   color: var(--color);
+  &:focus,
+  &:active {
+    border-color: var(--primary-color);
+  }
 }
 
-input#searchFilter:focus,
-input#searchFilter:active {
-  border-color: var(--primary-color);
-}
 .searchIcon,
 .closeIcon {
   position: absolute;
@@ -113,6 +110,22 @@ input#searchFilter:active {
   left: auto;
   right: 0;
   cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 100%;
+}
+
+.noProducts {
+  font-size: 1.2rem;
+  color: var(--color);
+  text-align: center;
+  margin: 40px auto;
 }
 
 @media screen and (max-width: 700px) {
@@ -131,20 +144,4 @@ input#searchFilter:active {
       }
     }
   }
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: flex-start;
-  min-width: 100%;
-}
-
-.noProducts {
-  font-size: 1.2rem;
-  color: var(--color);
-  text-align: center;
-  margin: 40px auto;
 }

@@ -124,9 +124,9 @@ nav {
     cursor: pointer;
     // padding: 16px 8px;
     &:hover {
-      background-color: var(--background-color_contrast);
+      background-color: var(--background-color);
       a {
-        color: var(--color_contrast);
+        color: var(--color);
       }
     }
   }

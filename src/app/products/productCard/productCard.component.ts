@@ -25,10 +25,10 @@ export interface ProductData {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductCardComponent {
+  // Input for the product data
   @Input() productData: null | ProductData = null;
+  // View child for the product image
   @ViewChild('productImageRef') productImageRef!: ElementRef;
-  @Input() category: string = 'all';
-  @Input() filterValue: string = '';
   ngAfterViewInit() {
     const productImageEle: HTMLDivElement = this.productImageRef.nativeElement;
     if (this.productData) {

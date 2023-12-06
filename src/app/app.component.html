@@ -1,14 +1,17 @@
 <div id="app">
   <nav>
+    <!-- hamburgerIcon -->
     <div id="menu-icon" class="icon-container" (click)="toggleIcon()">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
+    <!-- header Title -->
     <div class="header" routerLink="/home">
       <div class="logo"></div>
       <span class="shopName">{{title}}</span>
     </div>
+    <!-- navigation list -->
     <ul class="nav-list">
       <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
       <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
@@ -16,6 +19,7 @@
       <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
     </ul>
     <div class="spacer"></div>
+    <!-- theme toggle section -->
     <div class="theme" (click)="toggleTheme()" #themeEleRef>
       <span class="material-symbols-outlined lightMode">
         light_mode
@@ -26,6 +30,7 @@
     </div>
   </nav>
   <main>
+    <!-- router contents -->
     <router-outlet></router-outlet>
   </main>
   <footer>
