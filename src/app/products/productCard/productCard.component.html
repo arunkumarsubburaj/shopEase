@@ -4,7 +4,7 @@
   <div class="productFooter">
     <div class="productName">{{productData.title}}</div>
     <div class="productPrice">{{productData.price | currency:'INR'}}</div>
-    <button class="addToCartBtn">{{productData.isAvailable ? 'Add to
+    <button class="addToCartBtn" (click)="cartBtnClick($event)">{{productData.isAvailable ? 'Add to
       Cart': 'Sold Out'}}</button>
   </div>
 </div>

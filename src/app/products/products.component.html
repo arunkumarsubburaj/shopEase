@@ -22,7 +22,8 @@
   </div>
   <main>
     <ng-container *ngIf="modifiedProductList.length>0;else noProducts">
-      <app-product-card *ngFor="let product of modifiedProductList" [productData]="product"></app-product-card>
+      <app-product-card *ngFor="let product of modifiedProductList" [productData]="product"
+        (productClick)="addToCart()"></app-product-card>
     </ng-container>
     <ng-template #noProducts>
       <p class="noProducts">No Products to display</p>

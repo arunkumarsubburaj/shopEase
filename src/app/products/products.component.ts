@@ -3,6 +3,7 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProductCardComponent } from './productCard/productCard.component';
 import productData from './../../assets/mock/productData.json';
+import { CartServiceService } from '../cart-service.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -44,6 +45,7 @@ export class ProductsComponent {
       viewValue: 'Phones',
     },
   ];
+  constructor(public cartService: CartServiceService) {}
   // Execute the updateCategory function after the view is initialized
   ngAfterViewInit() {
     this.updateCategory();
@@ -106,5 +108,8 @@ export class ProductsComponent {
     this.searchValue = '';
     // Execute the search filter change
     this.searchFilterChange();
+  }
+  addToCart() {
+    this.cartService.setCartCount(1);
   }
 }

@@ -8,6 +8,7 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { CartServiceService } from './cart-service.service';
 
 export enum Theme {
   'Light' = 'light',
@@ -25,8 +26,14 @@ export class AppComponent {
   theme: Theme = Theme.Light;
   rootEle!: HTMLDivElement;
   @ViewChild('themeEleRef') themeEleRef!: ElementRef;
-  constructor(router: Router, element: ElementRef) {
+  cartCount: number = 0;
+  constructor(
+    router: Router,
+    element: ElementRef,
+    public cartService: CartServiceService
+  ) {
     this.rootEle = element.nativeElement;
+
     // Listen to router events
     router.events
       // Filter the events to only include NavigationStart
@@ -43,7 +50,12 @@ export class AppComponent {
         navList.classList.remove('show');
       });
   }
-  ngAfterViewInit() {}
+  ngOnInit() {}
+  ngAfterViewInit() {
+    this.cartService.getCartCount().subscribe((value) => {
+      this.cartCount = value;
+    });
+  }
 
   toggleIcon() {
     // Toggle the show class on the menu icon element

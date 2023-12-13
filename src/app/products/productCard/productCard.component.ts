@@ -5,6 +5,8 @@ import {
   Input,
   ViewChild,
   ElementRef,
+  Output,
+  EventEmitter,
 } from '@angular/core';
 export interface ProductData {
   _id: string;
@@ -29,10 +31,14 @@ export class ProductCardComponent {
   @Input() productData: null | ProductData = null;
   // View child for the product image
   @ViewChild('productImageRef') productImageRef!: ElementRef;
+  @Output() productClick = new EventEmitter<MouseEvent>();
   ngAfterViewInit() {
     const productImageEle: HTMLDivElement = this.productImageRef.nativeElement;
     if (this.productData) {
       productImageEle.style.backgroundImage = `url(${this.productData.imageUrl})`;
     }
+  }
+  cartBtnClick(event: MouseEvent) {
+    this.productClick.emit(event);
   }
 }
