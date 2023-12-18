@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "ghPages": "ng build --base-href 'https://arunkumarsubburaj.github.io/shopEase/' && npx angular-cli-ghpages --dir=dist/shop-ease/browser"
+    "ghPages": "ng build --base-href=/shopEase/ && npx angular-cli-ghpages --dir=dist/shop-ease/browser"
   },
   "private": true,
   "dependencies": {
